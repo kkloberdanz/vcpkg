@@ -4,16 +4,10 @@ vcpkg_minimum_required(VERSION 2022-10-12) # for ${VERSION}
 
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO mongodb/mongo-c-driver
+    REPO kkloberdanz/mongo-c-driver
     REF "${VERSION}"
-    SHA512 36cd8844b1cc9a935c50afc240523f9aaac7cffa58a5d0f9850848f22ab0f1f5a7202ec9b56b0a7d15f075f665bcecbec63b28d2074d35a7cf25065f9075c15e
+    SHA512 82e9259012884e1b597e2bad25a709ae65050d5337bbea244eb7066716820061907ee65227882191055c0ebb7dd2144552c770e6751fb483b8a3a1361b60f38e
     HEAD_REF master
-    PATCHES
-        disable-dynamic-when-static.patch
-        fix-include-directory.patch # vcpkg legacy decision
-        fix-dependencies.patch
-        fix-mingw.patch
-        pkgconfig.patch
 )
 file(WRITE "${SOURCE_PATH}/VERSION_CURRENT" "${VERSION}")
 

@@ -2,13 +2,8 @@ vcpkg_minimum_required(VERSION 2022-10-12) # for ${VERSION}
 
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO mongodb/mongo-cxx-driver
-    REF "r${VERSION}"
-    SHA512 d30404b0201bd211633b167d874406598481c69de85a00034dfde8b6bc38cced59f7b705327c239b16231f9570bfc2bf29659fef9bb18338fcb8af04403169e2
-    HEAD_REF master
-    PATCHES
-        fix-dependencies.patch
-        fix-msvc-cxx17.patch
+    REPO kkloberdanz/mongo-cxx-driver
+    HEAD_REF CXX-1543
 )
 file(WRITE "${SOURCE_PATH}/build/VERSION_CURRENT" "${VERSION}")
 
