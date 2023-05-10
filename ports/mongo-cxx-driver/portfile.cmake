@@ -3,6 +3,8 @@ vcpkg_minimum_required(VERSION 2022-10-12) # for ${VERSION}
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO kkloberdanz/mongo-cxx-driver
+    REF "${VERSION}"
+    SHA512 f37d142c9e25cbf67e9f04d99402a4ee81e619b3fcd9079abce107547a69cb79f9d91149dcb3910fb9a79429286c76816c65b4e85f99b489d1c7df4458298daf
     HEAD_REF CXX-1543
 )
 file(WRITE "${SOURCE_PATH}/build/VERSION_CURRENT" "${VERSION}")
